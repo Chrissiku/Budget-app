@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-#Budget_app
+# Budget_app
 
 > This web application is a Ruby on Rails application that allows the you to manage your budget in a professional way. You can register and/or log in and your data will be safely saved and you will be the only one person to manage access them. You can perform transaction transactions associated with a category of your transaction then at the end of the day you can see the money spent on each category.
 
