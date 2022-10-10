@@ -79,3 +79,5 @@ end
 gem 'devise', '~> 4.8'
 
 gem 'cancancan', '~> 3.4'
+
+gem 'ffi', '~> 1.15'
