@@ -6,7 +6,7 @@ RSpec.describe Entity, type: :model do
     Entity.new(name: 'Ford 150', amount: '100', author: user)
   end
 
-  before {subject.save}
+  before { subject.save }
 
   context 'Test for validation : ' do
     it 'Name should be valid' do
@@ -23,5 +23,4 @@ RSpec.describe Entity, type: :model do
       expect(subject).to_not be_valid
     end
   end
-
 end
