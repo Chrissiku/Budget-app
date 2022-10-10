@@ -1,83 +1,78 @@
-# Ruby on Rails Course
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-If you are not familiar with linters and GitHub Actions, read [root level README](../README.md).
+#Budget_app
 
-## Set-up GitHub Actions
+> This web application is a Ruby on Rails application that allows the you to manage your budget in a professional way. You can register and/or log in and your data will be safely saved and you will be the only one person to manage access them. You can perform transaction transactions associated with a category of your transaction then at the end of the day you can see the money spent on each category.
 
-This GitHub Action is going to run [Rubocop](https://docs.rubocop.org/en/stable/) and [Stylelint](https://stylelint.io/) to help you find style issues.
 
-[Stylelint](https://stylelint.io/) is a linter for your stylesheets that helps you avoid errors and enforce conventions.
+## Built With
 
-[Rubocop](https://docs.rubocop.org/en/stable/) is a Ruby static code analyzer (a.k.a. linter) and code formatter. It will enforce many of the guidelines outlined in the community [Ruby Style Guide](https://rubystyle.guide/).
+- Major: Ruby, HTML,CSS
+- Frameworks: `Rails`, `Bootstrap5`
+- Libraries: `Cancancan`, `Devise`
+- Technologies: Git, Gitflow, Linters, Github, PostgreSql, Rspec, Capybara, Robocop
 
-Please do the following **steps in this order**:
+## Live Demo
+> The link to the live demo is not available yet.
 
-1. In the first commit of your feature branch create a `.github/workflows` folder and add a copy of [`.github/workflows/linters.yml`](.github/workflows/linters.yml) to that folder.
-    - **Remember** to use the file linked above
-    - **Remember** that `.github` folder starts with a dot.
-2. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-3. When you open your first pull request you should see the result of the GitHub Actions:
+<!-- [Live Demo Link](https://infinite-ravine-36732.herokuapp.com/)  -->
 
-![gh actions checks](../assets/images/gh-actions-rubocop-stylelint-checks.png)
+## Getting Started
+To get a local copy up and running follow these simple example steps.
 
-Click on the `Details` link to see the full output and the errors that need to be fixed:
+### Prerequisites
+- Have a computer and internet connection
+- Have `Ruby` installed on your computer
+- Have `Rails` installed on your computer
+- Have a basic knowledge of `Ruby` and `OOP` concept
+- Have a basic knowledge of `Rails`
+- Have a general understanding of what testing is
+- Have `visual-studio code` or any other code editor installed on your computer.
 
-![gh actions failing checks](../assets/images/gh-actions-rubocop-failing-checks.png)
-
-## Set-up linters in your local env
-
-**Note**: The `npm` package manager is going to create a `node_modules` directory to install all of your dependencies. You shouldn't commit that directory. To avoid that, you can create a [`.gitignore`](https://git-scm.com/docs/gitignore) file and add `node_modules` to it:
+### Setup
+- In order to get a copy of this project you need to download it from https://github.com/Chrissiku/Budget-app
+- Extract the zipped file and open it in your code editor
+### Install
+- Run the command bellow in your terminal to get all required files
+```
+bundle install
+```
 
 ```
-# .gitignore
-node_modules/
+npm install
 ```
+### Run tests
+you can run one of the following command in your terminal
+1. Run testing
+```Ruby
+rspec
+```
+2. Run linters
+```Ruby
+> npx stylelint "**/*.{css,scss}"
+> Rubocop --color
+> Rubocop -a
+```
+## Authors
 
-### Rubocop
+👤 **Chris Siku**
 
-1. Add this line to the `Gemfile`
-    ```
-    gem 'rubocop', '>= 1.0', '< 2.0'
-    ```
-    *not sure how to use Gemfile? Read [this](https://bundler.io/v1.15/guides/bundler_setup.html)*.
-2. Run `bundle install`.
-3. Copy [.rubocop.yml](./.rubocop.yml) to the root directory of your project
-4. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-5. Run `rubocop`.
-6. Fix linter errors.
-7. **IMPORTANT NOTE**: feel free to research [auto-correct options for Rubocop](https://rubocop.readthedocs.io/en/latest/auto_correct/) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+- GitHub: [@githubhandle](https://github.com/Chrissiku)
+- Twitter: [@twitterhandle](https://twitter.com/christian_siku)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/christian-siku/)
 
-### Stylelint
 
-1. Run
+## 🤝 Contributing
 
-   ```
-   npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-   ```
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](../../issues/).
+## Show your support
 
-   *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
+Give a ⭐️ if you like this project!
+## Acknowledgments
 
-2. Copy [.stylelintrc.json](./.stylelintrc.json) to the root directory of your project.
-3. **Do not make any changes in config files - they represent style guidelines that you share with your tem - which is a group of all Microverse students.**
-   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-4. Run `npx stylelint "**/*.{css,scss}"` on the root of your directory of your project.
-5. Fix linter errors.
-6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Stylelint](https://stylelint.io/user-guide/cli#autofixing-errors) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+- Hats off to the whole microverse community
+- To to [Gregoire Vella](https://www.behance.net/gregoirevella) whose design is used.
 
-## RSpec/Heroku Actions
-
-Feel free to add your own deployment actions which can run your tests and deploy to Heroku.
-
-Make sure that you do not modify the [`.github/workflows/linters.yml`](.github/workflows/linters.yml) but that you create a separe GitHub Action workflow file for that.
-
-- [GitHub Actions with Ruby on Rails: Setting up Continuous Integration](https://gorails.com/episodes/github-actions-continuous-integration-ruby-on-rails)
-- [Deploying to Heroku from GitHub Actions](https://dev.to/heroku/deploying-to-heroku-from-github-actions-29ej)
-- [Building a Rails CI pipeline with GitHub Actions](https://boringrails.com/articles/building-a-rails-ci-pipeline-with-github-actions/)
-- [Github Actions to run Rubocop and RSpec tests on Rails with Postgres](https://dev.to/abdellani/github-actions-to-run-rubocop-and-rspec-tests-on-rails-with-postgres-47i)
-
-## Troubleshooting
-
-- If you are building an API only Rails application
-For API only Rails application you can remove the Stylelint config. To do so remove line no. [23](https://github.com/microverseinc/linters-config/blob/f0c812753d0418288c404ed4a441a2e7370e9f4e/ror/.github/workflows/linters.yml#L23) to [36](https://github.com/microverseinc/linters-config/blob/f0c812753d0418288c404ed4a441a2e7370e9f4e/ror/.github/workflows/linters.yml#L36) from the [linter.yml]((https://github.com/microverseinc/linters-config/blob/master/ror/.github/workflows/linters.yml)) file.
+## 📝 License
+This project is [MIT](./LICENSE) licensed.
