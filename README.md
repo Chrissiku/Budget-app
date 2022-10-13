@@ -13,9 +13,8 @@
 - Technologies: Git, Gitflow, Linters, Github, PostgreSql, Rspec, Capybara, Robocop
 
 ## Live Demo
-> The link to the live demo is not available yet.
 
-<!-- [Live Demo Link](https://infinite-ravine-36732.herokuapp.com/)  -->
+[Live Demo Link](https://budget01app.herokuapp.com/)
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
