@@ -30,7 +30,7 @@ class EntitiesController < ApplicationController
   end
 
   # Transcation .
-  
+
   def index_transaction
     @group = Group.find_by(id: params[:group_id])
   end
